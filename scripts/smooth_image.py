@@ -1,13 +1,9 @@
 from envtest import smooth_image
 from scipy import misc
 import matplotlib.pyplot as plt
-from scipy.ndimage import gaussian_filter
 
 image = misc.ascent()
 sigma = 5
-
-def smooth_image(a, sigma = 1):
-    return gaussian_filter(a, sigma=sigma)
 
 smoothed_image = smooth_image(image, sigma)
 
